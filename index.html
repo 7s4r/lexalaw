@@ -63,9 +63,9 @@
             id="language-select"
             class="border border-gray-300 rounded-lg"
           >
-            <option value="fr">FR</option>
-            <option value="ru">RU</option>
-            <option value="uk">UK</option>
+            <option value="fr">FRA</option>
+            <option value="ru">RUS</option>
+            <option value="uk">UKR</option>
           </select>
         </div>
       </div>
@@ -240,7 +240,17 @@
           Contactez-nous
         </h2>
         <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-          <form action="#" method="POST">
+          <form method="POST" id="contact-form">
+            <input
+              type="hidden"
+              name="access_key"
+              value="8b830ebc-7b30-4fab-a668-fd0b485c5c38"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New contact from lexalaw"
+            />
             <div class="mb-4">
               <label
                 for="name"
@@ -273,6 +283,42 @@
             </div>
             <div class="mb-4">
               <label
+                for="service"
+                class="block text-sm font-semibold"
+                id="contact-service-label"
+                >Type de service</label
+              >
+              <select
+                id="service"
+                name="service"
+                class="w-full mt-2 p-2 border border-gray-300 rounded-lg"
+                required
+              >
+                <option value="" disabled selected id="contact-service-choose">
+                  Sélectionnez un service
+                </option>
+                <option value="consultation-juridique" id="service1-title">
+                  Consultation juridique
+                </option>
+                <option value="litiges-contentieux" id="service2-title">
+                  Litiges et contentieux
+                </option>
+                <option value="droit-des-contrats" id="service3-title">
+                  Droit des contrats
+                </option>
+                <option value="droit-de-la-famille" id="service4-title">
+                  Droit de la famille
+                </option>
+                <option value="droit-des-affaires" id="service5-title">
+                  Droit des affaires
+                </option>
+                <option value="droit-immobilier" id="service6-title">
+                  Droit immobilier
+                </option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label
                 for="message"
                 class="block text-sm font-semibold"
                 id="contact-message-label"
@@ -293,6 +339,7 @@
             >
               Envoyer
             </button>
+            <div class="mb-4" id="form-result"></div>
           </form>
         </div>
       </div>
@@ -350,6 +397,8 @@
           'contact-title': 'Contactez-nous',
           'contact-name-label': 'Nom',
           'contact-email-label': 'Email',
+          'contact-service-label': 'Type de service',
+          'contact-service-choose': 'Sélectionnez un service',
           'contact-message-label': 'Message',
           'contact-button': 'Envoyer',
           'footer-text': '&copy; 2024 Lexalaw. Tous droits réservés.',
@@ -389,6 +438,8 @@
           'contact-title': 'Свяжитесь с нами',
           'contact-name-label': 'Имя',
           'contact-email-label': 'Эл. почта',
+          'contact-service-label': 'Тип услуги',
+          'contact-service-choose': 'Выберите услугу',
           'contact-message-label': 'Сообщение',
           'contact-button': 'Отправить',
           'footer-text': '&copy; 2024 Lexalaw. Все права защищены.',
@@ -427,6 +478,8 @@
           'contact-title': "Зв'яжіться з нами",
           'contact-name-label': "Ім'я",
           'contact-email-label': 'Ел. пошта',
+          'contact-service-label': 'Тип послуги',
+          'contact-service-choose': 'Виберіть послугу',
           'contact-message-label': 'Повідомлення',
           'contact-button': 'Надіслати',
           'footer-text': '&copy; 2024 Lexalaw. Всі права захищені.',
@@ -448,6 +501,45 @@
           }
         });
       }
+
+      const contactForm = document.getElementById('contact-form');
+      const formResult = document.getElementById('form-result');
+
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        formResult.innerHTML = 'Please wait...';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              formResult.innerHTML = json.message;
+            } else {
+              console.log(response);
+              formResult.innerHTML = json.message;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            formResult.innerHTML = 'Something went wrong!';
+          })
+          .then(function () {
+            contactForm.reset();
+            setTimeout(() => {
+              formResult.style.display = 'none';
+            }, 3000);
+          });
+      });
     </script>
   </body>
 </html>
