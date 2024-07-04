@@ -3,6 +3,45 @@ document.getElementById('menu-btn').addEventListener('click', function () {
 });
 
 const translations = {
+  en: {
+    'site-title': 'LEXALAW',
+    'nav-services': 'Services',
+    'nav-about': 'About',
+    'nav-contact': 'Contact',
+    'hero-title': 'Welcome to Lexalaw',
+    'hero-text': 'We offer a wide range of legal services to meet your needs.',
+    'services-title': 'Our Services',
+    'service1-title': 'Legal Consultation',
+    'service1-text':
+      'Personalized legal consultations to understand and defend your rights.',
+    'service2-title': 'Litigation and Dispute Resolution',
+    'service2-text':
+      'Representation in court to effectively resolve your disputes.',
+    'service3-title': 'Contract Law',
+    'service3-text':
+      'Drafting and reviewing contracts to protect your interests and prevent conflicts.',
+    'service4-title': 'Family Law',
+    'service4-text':
+      'Advice and representation for all family law-related matters.',
+    'service5-title': 'Business Law',
+    'service5-text': 'Legal support for businesses and entrepreneurs.',
+    'service6-title': 'Real Estate Law',
+    'service6-text':
+      'Legal assistance in real estate transactions and disputes.',
+    'about-title': 'About Us',
+    'about-text1':
+      'Lexalaw is dedicated to providing high-quality legal services. Our team of experts consists of lawyers specializing in various areas of law. We are committed to defending your rights with integrity and professionalism.',
+    'about-text2':
+      'Whether you need legal advice, court representation, or support for your projects, we are here to help you every step of the way.',
+    'contact-title': 'A question? Need appointment? Contact us',
+    'contact-name-label': 'Name',
+    'contact-email-label': 'Email',
+    'contact-service-label': 'Type of Service',
+    'contact-service-choose': 'Select a service',
+    'contact-message-label': 'Message',
+    'contact-button': 'Send',
+    'footer-text': '&copy; 2024 Lexalaw. All rights reserved.',
+  },
   fr: {
     'site-title': 'LEXALAW',
     'nav-services': 'Services',
