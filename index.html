@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lexalaw</title>
-    <meta name="description" content="Services juridiques de haute qualité" />
+    <title>Lexalaw | Cabinet d’avocats international</title>
+    <meta
+      name="description"
+      content="Cabinet d’avocats multilingue spécialisé en droit international, pénal, de la famille, et immigration. Nous offrons des services juridiques de haute qualité pour les particuliers et les entreprises à travers l'Europe et le monde."
+    />
     <meta
       name="keywords"
-      content="services juridiques, avocat, conseils, litiges, contentieux, droit de la famille, droit des affaires, droit immobilier, contrats"
+      content="avocat international, avocat pénaliste, droit des étrangers, avocat divorce, avocat sanctions européennes, avocat Monaco, avocat crypto, avocat blockchain, cabinet multilingue, Lexalaw, contentieux transfrontalier, avocat droit de la famille, avocat immigration, droit international public, droit international privé"
     />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
@@ -27,6 +30,44 @@
         display: block;
       }
     </style>
+    <link rel="alternate" hreflang="fr" href="https://lexalaw.eu?lang=fr" />
+    <link rel="alternate" hreflang="en" href="https://lexalaw.eu?lang=en" />
+    <link rel="alternate" hreflang="ru" href="https://lexalaw.eu?lang=ru" />
+    <link rel="alternate" hreflang="uk" href="https://lexalaw.eu?lang=uk" />
+    <link rel="alternate" hreflang="x-default" href="https://lexalaw.eu" />
+    <link rel="canonical" href="https://lexalaw.eu" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Lexalaw",
+        "url": "https://lexalaw.eu",
+        "image": "https://lexalaw.eu/images/lexalaw-logo.png",
+        "description": "Cabinet d’avocats multilingue spécialisé en droit international, pénal, de la famille, et immigration.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Europe",
+          "addressCountry": "FR"
+        },
+        "areaServed": "International",
+        "availableLanguage": ["fr", "en", "ru", "uk"],
+        "legalName": "Lexalaw"
+      }
+    </script>
+    <meta
+      property="og:title"
+      content="Lexalaw | Cabinet d’avocats multilingue"
+    />
+    <meta
+      property="og:description"
+      content="Droit international, pénal, de la famille et des étrangers."
+    />
+    <meta property="og:url" content="https://lexalaw.eu" />
+    <meta
+      property="og:image"
+      content="https://lexalaw.eu/images/lexalaw-logo.png"
+    />
+    <meta property="og:type" content="website" />
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!-- Navbar -->
@@ -38,6 +79,7 @@
           <img
             src="images/lexalaw-logo.png"
             alt="Lexalaw Logo"
+            loading="lazy"
             class="h-10 w-10 mr-2"
           />
           <a href="#" class="text-xl font-bold text-blue-950" id="site-title"
@@ -48,10 +90,10 @@
           <a href="#services" class="text-gray-700" id="nav-services"
             >Services</a
           >
-          <a href="#about" class="text-gray-700" id="nav-about">About</a>
+          <a href="#about" class="text-gray-700" id="nav-about">A propos</a>
           <a href="#contact" class="text-gray-700" id="nav-contact">Contact</a>
         </div>
-        <div class="md:hidden flex items-center">
+        <div class="flex items-center">
           <button id="menu-btn" class="text-gray-700 focus:outline-none mr-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +132,7 @@
           href="#about"
           class="block px-4 py-2 text-gray-700"
           id="mobile-nav-about"
-          >About</a
+          >A propos</a
         >
         <a
           href="#contact"
@@ -109,10 +151,11 @@
       <div class="container mx-auto h-full flex items-center justify-center">
         <div class="bg-white bg-opacity-75 p-8 rounded shadow-md text-center">
           <h1 class="text-4xl font-bold mb-4" id="hero-title">
-            Welcome to Lexalaw
+            Bienvenue chez Lexalaw
           </h1>
           <p class="text-xl" id="hero-text">
-            We offer a wide range of legal services to meet your needs.
+            Nous offrons une large gamme de services juridiques pour répondre à
+            vos besoins.
           </p>
         </div>
       </div>
@@ -122,87 +165,214 @@
     <section id="services" class="py-16">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12" id="services-title">
-          Our Services
+          Nos Domaines d’Expertise
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Contentieux Commercial International -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <img
-              src="images/business-meeting.jpg"
-              alt="Legal Consultation"
-              class="w-full h-48 object-cover rounded-t-lg"
+              src="images/contentieux-commercial-international.jpg"
+              alt="Contentieux Commercial International"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service1-img"
+              loading="lazy"
             />
             <h3 class="text-2xl font-bold mt-4" id="service1-title">
-              Legal Consultation
+              Contentieux Commercial International
             </h3>
             <p class="mt-2" id="service1-text">
-              Personalized legal consultations to understand and defend your
-              rights.
+              Résolution stratégique des litiges complexes, en France et à
+              l'international. Nous intervenons devant toutes juridictions, y
+              compris en arbitrage, et collaborons avec nos experts en droit de
+              la concurrence, propriété intellectuelle et environnement.
             </p>
           </div>
+
+          <!-- Droit du Sport -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <img
-              src="images/dispute-resolution.jpg"
-              alt="Litigation and Dispute Resolution"
-              class="w-full h-48 object-cover rounded-t-lg"
+              src="images/droit-du-sport.jpg"
+              alt="Droit du Sport"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service2-img"
+              loading="lazy"
             />
             <h3 class="text-2xl font-bold mt-4" id="service2-title">
-              Litigation and Dispute Resolution
+              Droit du Sport
             </h3>
             <p class="mt-2" id="service2-text">
-              Representation in court to effectively resolve your disputes.
+              Accompagnement juridique global des acteurs du sport : clubs,
+              fédérations, sportifs, sponsors, diffuseurs. Notre approche
+              pluridisciplinaire vous apporte sécurité et performance.
             </p>
           </div>
+
+          <!-- Confiscations & Saisies -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <img
-              src="images/contract-law.jpg"
-              alt="Contract Law"
-              class="w-full h-48 object-cover rounded-t-lg"
+              src="images/confiscations-saisies.jpg"
+              alt="Confiscations & Saisies"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service3-img"
+              loading="lazy"
             />
             <h3 class="text-2xl font-bold mt-4" id="service3-title">
-              Contract Law
+              Confiscations & Saisies
             </h3>
             <p class="mt-2" id="service3-text">
-              Drafting and reviewing contracts to protect your interests and
-              prevent conflicts.
+              Défense des personnes visées par des gels d’avoirs ou saisies, y
+              compris liées à des sanctions internationales. Notre double
+              compétence pénale et civile garantit une stratégie efficace.
             </p>
           </div>
+
+          <!-- Sanctions Internationales -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <img
-              src="images/family-law.jpg"
-              alt="Family Law"
-              class="w-full h-48 object-cover rounded-t-lg"
+              src="images/sanctions-internationales.jpg"
+              alt="Sanctions Internationales"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service4-img"
+              loading="lazy"
             />
             <h3 class="text-2xl font-bold mt-4" id="service4-title">
-              Family Law
+              Sanctions Internationales
             </h3>
             <p class="mt-2" id="service4-text">
-              Advice and representation for all family law-related matters.
+              Contestation des sanctions devant les juridictions européennes.
+              Accompagnement pour la conformité aux régimes nationaux et
+              internationaux de sanctions.
             </p>
           </div>
+
+          <!-- Entraide Judiciaire & Extradition -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <img
-              src="images/business-law.jpg"
-              alt="Business Law"
-              class="w-full h-48 object-cover rounded-t-lg"
+              src="images/entraide-judiciaire-extradition.jpg"
+              alt="Entraide Judiciaire & Extradition"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service5-img"
+              loading="lazy"
             />
             <h3 class="text-2xl font-bold mt-4" id="service5-title">
-              Business Law
+              Entraide Judiciaire & Extradition
             </h3>
             <p class="mt-2" id="service5-text">
-              Legal support for businesses and entrepreneurs.
+              Assistance dans les procédures d’extradition, mandats d’arrêt,
+              gels transfrontaliers. Représentation devant INTERPOL pour
+              contester les notices rouges.
             </p>
           </div>
+
+          <!-- Exécution de Jugements & Arbitrage -->
           <div class="bg-white p-6 rounded-lg shadow-md">
             <img
-              src="images/real-estate-law.jpg"
-              alt="Droit immobilier"
-              class="w-full h-48 object-cover rounded-t-lg"
+              src="images/execution-arbitrage.jpg"
+              alt="Exécution de Jugements & Arbitrage"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service6-img"
+              loading="lazy"
             />
             <h3 class="text-2xl font-bold mt-4" id="service6-title">
-              Real Estate Law
+              Exécution de Jugements & Arbitrage
             </h3>
             <p class="mt-2" id="service6-text">
-              Legal assistance in real estate transactions and disputes.
+              Mise en œuvre et exécution de décisions judiciaires et sentences
+              arbitrales, y compris contre des États ou entités publiques.
+            </p>
+          </div>
+
+          <!-- Droit des Étrangers -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="images/droit-etrangers.jpg"
+              alt="Droit des Étrangers"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service7-img"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold mt-4" id="service7-title">
+              Droit des Étrangers
+            </h3>
+            <p class="mt-2" id="service7-text">
+              Conseil et assistance pour les démarches de séjour, recours OQTF
+              et IRTF. Accompagnement humain et réactif à chaque étape.
+            </p>
+          </div>
+
+          <!-- Blockchain & Cryptomonnaies -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="images/blockchain-cryptomonnaies.jpg"
+              alt="Blockchain & Cryptomonnaies"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service8-img"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold mt-4" id="service8-title">
+              Blockchain & Cryptomonnaies
+            </h3>
+            <p class="mt-2" id="service8-text">
+              Conseil juridique pour vos projets Web3 : structuration,
+              fiscalité, conformité AMF, rédaction de White Papers et
+              enregistrement PSAN.
+            </p>
+          </div>
+
+          <!-- Droit Pénal -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="images/droit-penal.jpg"
+              alt="Droit Pénal"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service9-img"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold mt-4" id="service9-title">
+              Droit Pénal
+            </h3>
+            <p class="mt-2" id="service9-text">
+              Défense en matière pénale, affaires complexes, crimes organisés,
+              blanchiment, homicides, et accompagnement des familles étrangères
+              en cas de décès ou accident grave.
+            </p>
+          </div>
+
+          <!-- Droit de la Famille -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="images/droit-famille.jpg"
+              alt="Droit de la Famille"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service10-img"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold mt-4" id="service10-title">
+              Droit de la Famille
+            </h3>
+            <p class="mt-2" id="service10-text">
+              Divorce, garde d’enfants, violences conjugales : nous privilégions
+              les solutions apaisées, tout en défendant vos droits avec
+              détermination.
+            </p>
+          </div>
+
+          <!-- Droit à Monaco -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              src="images/droit-monaco.jpg"
+              alt="Droit à Monaco"
+              class="w-full h-48 object-cover rounded-lg"
+              id="service11-img"
+              loading="lazy"
+            />
+            <h3 class="text-2xl font-bold mt-4" id="service11-title">
+              Droit à Monaco
+            </h3>
+            <p class="mt-2" id="service11-text">
+              Conseil et contentieux devant les juridictions monégasques :
+              affaires pénales, civiles, commerciales et familiales.
+              Accompagnement des non-résidents.
             </p>
           </div>
         </div>
@@ -213,24 +383,27 @@
     <section id="about" class="bg-white py-16">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12" id="about-title">
-          About us
+          A propos de nous
         </h2>
         <div class="flex flex-col md:flex-row items-center">
           <img
             src="images/lexalaw-team.jpg"
-            alt="Our team"
+            alt=""
+            id="about-img"
+            loading="lazy"
             class="w-full md:w-1/2 h-64 object-cover rounded-lg"
           />
           <div class="md:ml-8 mt-8 md:mt-0">
             <p class="text-lg" id="about-text1">
-              Lexalaw is dedicated to providing high-quality legal services. Our
-              team of experts consists of lawyers specializing in various areas
-              of law. We are committed to defending your rights with integrity
-              and professionalism.
+              Lexalaw est dédié à fournir des services juridiques de haute
+              qualité. Notre équipe d'experts est composée d'avocats spécialisés
+              dans divers domaines du droit. Nous nous engageons à défendre vos
+              droits avec intégrité et professionnalisme.
             </p>
             <p class="mt-4 text-lg" id="about-text2">
-              Whether you need legal advice, court representation, or support
-              for your projects, we are here to help you every step of the way.
+              Que vous ayez besoin de conseils juridiques, de représentation
+              devant les tribunaux ou de soutien pour vos projets, nous sommes
+              là pour vous aider à chaque étape.
             </p>
           </div>
         </div>
@@ -241,7 +414,7 @@
     <section id="contact" class="py-16 bg-gray-100">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12" id="contact-title">
-          A question? Need appointment? <br />Contact us
+          Une question ? Besoin d'un rendez-vous ? <br />Contactez-nous
         </h2>
         <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
           <form method="POST" id="contact-form">
@@ -260,7 +433,7 @@
                 for="name"
                 class="block text-sm font-semibold"
                 id="contact-name-label"
-                >Name</label
+                >Nom</label
               >
               <input
                 type="text"
@@ -290,7 +463,7 @@
                 for="phone"
                 class="block text-sm font-semibold"
                 id="contact-phone-label"
-                >Phone</label
+                >Téléphone</label
               >
               <input
                 type="phone"
@@ -305,7 +478,7 @@
                 for="service"
                 class="block text-sm font-semibold"
                 id="contact-service-label"
-                >Type of service</label
+                >Type de service</label
               >
               <select
                 id="service"
@@ -313,27 +486,27 @@
                 class="w-full mt-2 p-2 border border-gray-300 rounded-lg"
                 required
               >
-                <option value="" disabled selected id="contact-service-choose">
-                  Select a service
-                </option>
-                <option value="legal-consultation" id="service1-title">
-                  Legal consultation
-                </option>
-                <option value="dispute-resolution" id="service2-title">
-                  Litigation and dispute resolution
-                </option>
-                <option value="contract-law" id="service3-title">
-                  Contract law
-                </option>
-                <option value="family-law" id="service4-title">
-                  Family law
-                </option>
-                <option value="business-law" id="service5-title">
-                  Business law
-                </option>
-                <option value="real-estate-law" id="service6-title">
-                  Real estate law
-                </option>
+                <option
+                  value=""
+                  disabled
+                  selected
+                  id="contact-service-choose"
+                ></option>
+                <option
+                  value="legal-consultation"
+                  id="form-service1-option"
+                ></option>
+                <option
+                  value="dispute-resolution"
+                  id="form-service2-option"
+                ></option>
+                <option value="contract-law" id="form-service3-option"></option>
+                <option value="family-law" id="form-service4-option"></option>
+                <option value="business-law" id="form-service5-option"></option>
+                <option
+                  value="real-estate-law"
+                  id="form-service6-option"
+                ></option>
               </select>
             </div>
             <div class="mb-4">
@@ -356,7 +529,7 @@
               class="w-full bg-blue-600 text-white py-2 rounded-lg"
               id="contact-button"
             >
-              Send
+              Envoyer
             </button>
             <div class="mb-4" id="form-result"></div>
           </form>
@@ -364,15 +537,28 @@
       </div>
     </section>
 
+    <!-- SEO Text Section -->
+    <!-- <section id="seo-text" class="bg-white py-12 border-t border-gray-200">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-2xl font-bold mb-4" id="seo-text-title"></h2>
+        <p
+          class="text-gray-800 leading-relaxed mb-4"
+          id="seo-text-paragraph1"
+        ></p>
+        <p class="text-gray-800 leading-relaxed" id="seo-text-paragraph2"></p>
+      </div>
+    </section> -->
+
     <!-- Footer -->
     <footer class="bg-white py-6">
       <div class="container mx-auto text-center">
         <p class="text-gray-700" id="footer-text">
-          &copy; 2024 Lexalaw. All rights reserved
+          &copy; 2025 Lexalaw. All rights reserved
         </p>
       </div>
     </footer>
 
+    <script type="text/javascript" src="js/locales.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
