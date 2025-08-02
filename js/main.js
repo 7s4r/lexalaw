@@ -156,3 +156,18 @@ document.addEventListener('click', function (event) {
 function onSubmit(token) {
   document.getElementById('contact-form').submit();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const url = new URL(window.location.href);
+  const lang = url.searchParams.get('lang');
+  const canonical = document.createElement('link');
+  canonical.setAttribute('rel', 'canonical');
+
+  if (lang) {
+    canonical.setAttribute('href', `https://lexalaw.eu?lang=${lang}`);
+  } else {
+    canonical.setAttribute('href', 'https://lexalaw.eu');
+  }
+
+  document.head.appendChild(canonical);
+});
