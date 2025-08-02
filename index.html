@@ -54,6 +54,20 @@
         "legalName": "Lexalaw"
       }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-90BNN49EWZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-90BNN49EWZ');
+    </script>
     <meta
       property="og:title"
       content="Lexalaw | Cabinet d’avocats multilingue"
@@ -71,7 +85,7 @@
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!-- Navbar -->
-    <nav class="bg-white shadow">
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
@@ -86,6 +100,8 @@
             >LEXALAW</a
           >
         </div>
+
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-4">
           <a href="#services" class="text-gray-700" id="nav-services"
             >Services</a
@@ -93,8 +109,13 @@
           <a href="#about" class="text-gray-700" id="nav-about">A propos</a>
           <a href="#contact" class="text-gray-700" id="nav-contact">Contact</a>
         </div>
+
         <div class="flex items-center">
-          <button id="menu-btn" class="text-gray-700 focus:outline-none mr-4">
+          <!-- Mobile Menu Toggle -->
+          <button
+            id="menu-btn"
+            class="text-gray-700 focus:outline-none mr-4 md:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -110,17 +131,10 @@
               />
             </svg>
           </button>
-          <select
-            id="language-select"
-            class="border border-gray-300 rounded-lg"
-          >
-            <option value="en">ENG</option>
-            <option value="fr">FRA</option>
-            <option value="ru">RUS</option>
-            <option value="uk">UKR</option>
-          </select>
         </div>
       </div>
+
+      <!-- Mobile Menu -->
       <div id="menu" class="mobile-menu md:hidden">
         <a
           href="#services"
@@ -145,7 +159,7 @@
 
     <!-- Hero Section -->
     <section
-      class="bg-cover bg-center h-96"
+      class="bg-cover bg-center h-96 mt-16"
       style="background-image: url('images/law-firm-lexalaw-hero.jpg')"
     >
       <div class="container mx-auto h-full flex items-center justify-center">
@@ -165,11 +179,13 @@
     <section id="services" class="py-16">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12" id="services-title">
-          Nos Domaines d’Expertise
+          ⚖️ Nos Domaines d’Expertise
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Contentieux Commercial International -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/contentieux-commercial-international.jpg"
               alt="Contentieux Commercial International"
@@ -189,7 +205,9 @@
           </div>
 
           <!-- Droit du Sport -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/droit-du-sport.jpg"
               alt="Droit du Sport"
@@ -208,7 +226,9 @@
           </div>
 
           <!-- Confiscations & Saisies -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/confiscations-saisies.jpg"
               alt="Confiscations & Saisies"
@@ -227,7 +247,9 @@
           </div>
 
           <!-- Sanctions Internationales -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/sanctions-internationales.jpg"
               alt="Sanctions Internationales"
@@ -246,7 +268,9 @@
           </div>
 
           <!-- Entraide Judiciaire & Extradition -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/entraide-judiciaire-extradition.jpg"
               alt="Entraide Judiciaire & Extradition"
@@ -265,7 +289,9 @@
           </div>
 
           <!-- Exécution de Jugements & Arbitrage -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/execution-arbitrage.jpg"
               alt="Exécution de Jugements & Arbitrage"
@@ -283,7 +309,9 @@
           </div>
 
           <!-- Droit des Étrangers -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/droit-etrangers.jpg"
               alt="Droit des Étrangers"
@@ -301,7 +329,9 @@
           </div>
 
           <!-- Blockchain & Cryptomonnaies -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/blockchain-cryptomonnaies.jpg"
               alt="Blockchain & Cryptomonnaies"
@@ -320,7 +350,9 @@
           </div>
 
           <!-- Droit Pénal -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/droit-penal.jpg"
               alt="Droit Pénal"
@@ -339,7 +371,9 @@
           </div>
 
           <!-- Droit de la Famille -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/droit-famille.jpg"
               alt="Droit de la Famille"
@@ -358,7 +392,9 @@
           </div>
 
           <!-- Droit à Monaco -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div
+            class="bg-white p-6 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:shadow-lg hover:scale-105"
+          >
             <img
               src="images/droit-monaco.jpg"
               alt="Droit à Monaco"
@@ -383,7 +419,7 @@
     <section id="about" class="bg-white py-16">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12" id="about-title">
-          A propos de nous
+          👥 À propos de nous
         </h2>
         <div class="flex flex-col md:flex-row items-center">
           <img
@@ -414,7 +450,7 @@
     <section id="contact" class="py-16 bg-gray-100">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12" id="contact-title">
-          Une question ? Besoin d'un rendez-vous ? <br />Contactez-nous
+          📞 Une question ? Besoin d'un rendez-vous ? <br />Contactez-nous
         </h2>
         <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
           <form method="POST" id="contact-form">
@@ -429,12 +465,16 @@
               value="New contact from lexalaw"
             />
             <div class="mb-4">
-              <label
-                for="name"
-                class="block text-sm font-semibold"
-                id="contact-name-label"
-                >Nom</label
-              >
+              <div class="flex items-center">
+                <label
+                  for="name"
+                  class="block text-sm font-semibold"
+                  id="contact-name-label"
+                >
+                  Nom
+                </label>
+                <span class="text-red-500">*</span>
+              </div>
               <input
                 type="text"
                 id="name"
@@ -444,12 +484,15 @@
               />
             </div>
             <div class="mb-4">
-              <label
-                for="email"
-                class="block text-sm font-semibold"
-                id="contact-email-label"
-                >Email</label
-              >
+              <div class="flex items-center">
+                <label
+                  for="email"
+                  class="block text-sm font-semibold"
+                  id="contact-email-label"
+                  >Email</label
+                >
+                <span class="text-red-500">*</span>
+              </div>
               <input
                 type="email"
                 id="email"
@@ -459,12 +502,15 @@
               />
             </div>
             <div class="mb-4">
-              <label
-                for="phone"
-                class="block text-sm font-semibold"
-                id="contact-phone-label"
-                >Téléphone</label
-              >
+              <div class="flex items-center">
+                <label
+                  for="phone"
+                  class="block text-sm font-semibold"
+                  id="contact-phone-label"
+                  >Téléphone</label
+                >
+                <span class="text-red-500">*</span>
+              </div>
               <input
                 type="phone"
                 id="phone"
@@ -474,12 +520,15 @@
               />
             </div>
             <div class="mb-4">
-              <label
-                for="service"
-                class="block text-sm font-semibold"
-                id="contact-service-label"
-                >Type de service</label
-              >
+              <div class="flex items-center">
+                <label
+                  for="service"
+                  class="block text-sm font-semibold"
+                  id="contact-service-label"
+                  >Type de service</label
+                >
+                <span class="text-red-500">*</span>
+              </div>
               <select
                 id="service"
                 name="service"
@@ -493,29 +542,59 @@
                   id="contact-service-choose"
                 ></option>
                 <option
-                  value="legal-consultation"
+                  value="contentieux-commercial"
                   id="form-service1-option"
                 ></option>
                 <option
-                  value="dispute-resolution"
+                  value="droit-du-sport"
                   id="form-service2-option"
                 ></option>
-                <option value="contract-law" id="form-service3-option"></option>
-                <option value="family-law" id="form-service4-option"></option>
-                <option value="business-law" id="form-service5-option"></option>
                 <option
-                  value="real-estate-law"
+                  value="confiscations-saisies"
+                  id="form-service3-option"
+                ></option>
+                <option
+                  value="sanctions-internationales"
+                  id="form-service4-option"
+                ></option>
+                <option
+                  value="entraide-extradition"
+                  id="form-service5-option"
+                ></option>
+                <option
+                  value="execution-arbitrage"
                   id="form-service6-option"
                 ></option>
+                <option
+                  value="droit-etrangers"
+                  id="form-service7-option"
+                ></option>
+                <option
+                  value="blockchain-crypto"
+                  id="form-service8-option"
+                ></option>
+                <option value="droit-penal" id="form-service9-option"></option>
+                <option
+                  value="droit-famille"
+                  id="form-service10-option"
+                ></option>
+                <option
+                  value="droit-monaco"
+                  id="form-service11-option"
+                ></option>
+                <option value="autre" id="form-service13-option"></option>
               </select>
             </div>
             <div class="mb-4">
-              <label
-                for="message"
-                class="block text-sm font-semibold"
-                id="contact-message-label"
-                >Message</label
-              >
+              <div class="flex items-center">
+                <label
+                  for="message"
+                  class="block text-sm font-semibold"
+                  id="contact-message-label"
+                  >Message</label
+                >
+                <span class="text-red-500">*</span>
+              </div>
               <textarea
                 id="message"
                 name="message"
@@ -528,10 +607,14 @@
               type="submit"
               class="w-full bg-blue-600 text-white py-2 rounded-lg"
               id="contact-button"
+              class="g-recaptcha"
+              data-sitekey="6LdtZJgrAAAAALup6_dPeoXOmqG1TKjzYxT9cSQs"
+              data-callback="onSubmit"
+              data-action="submit"
             >
               Envoyer
             </button>
-            <div class="mb-4" id="form-result"></div>
+            <div class="mb-4" id="form-result" class="font-semibold"></div>
           </form>
         </div>
       </div>
@@ -553,12 +636,25 @@
     <footer class="bg-white py-6">
       <div class="container mx-auto text-center">
         <p class="text-gray-700" id="footer-text">
-          &copy; 2025 Lexalaw. All rights reserved
+          &copy; 2023 - 2025 Lexalaw. All rights reserved
         </p>
+        <div class="flex justify-center mt-4">
+          <select
+            id="language-select"
+            aria-label="Language selection"
+            class="border border-gray-300 rounded-lg px-3 py-1 text-sm shadow-sm bg-white hover:border-blue-500 focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="fr">🇫🇷 Français</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="uk">🇺🇦 Українська</option>
+          </select>
+        </div>
       </div>
     </footer>
 
     <script type="text/javascript" src="js/locales.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </body>
 </html>

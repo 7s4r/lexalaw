@@ -30,7 +30,10 @@ languageSelect.addEventListener('change', function () {
 });
 
 document.getElementById('menu-btn').addEventListener('click', function () {
-  document.getElementById('menu').classList.toggle('active');
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+  menu.classList.toggle('transition-all');
+  menu.classList.toggle('duration-300');
 });
 
 function applyTranslations(lang) {
@@ -77,7 +80,10 @@ contactForm.addEventListener('submit', function (e) {
   const formData = new FormData(contactForm);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  formResult.innerHTML = 'Please wait...';
+  const currentLang = localStorage.getItem('language') || 'en';
+  formResult.className = 'text-blue-600 font-semibold';
+  formResult.innerHTML =
+    translations[currentLang]['contact-wait'] || 'Please wait...';
 
   fetch('https://api.web3forms.com/submit', {
     method: 'POST',
@@ -90,15 +96,22 @@ contactForm.addEventListener('submit', function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        formResult.innerHTML = json.message;
+        formResult.innerHTML =
+          translations[currentLang]['contact-success'] ||
+          'Your message has been sent successfully.';
+        formResult.className = 'text-green-600 font-semibold';
       } else {
-        console.log(response);
-        formResult.innerHTML = json.message;
+        formResult.className = 'text-red-600 font-semibold';
+        formResult.innerHTML =
+          translations[currentLang]['contact-error'] ||
+          'There was an error sending your message. Please try again.';
       }
     })
     .catch((error) => {
       console.log(error);
-      formResult.innerHTML = 'Something went wrong!';
+      formResult.className = 'text-red-600 font-semibold';
+      formResult.innerHTML =
+        translations[currentLang]['contact-error'] || 'Something went wrong!';
     })
     .then(function () {
       contactForm.reset();
@@ -107,3 +120,39 @@ contactForm.addEventListener('submit', function (e) {
       }, 3000);
     });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href').slice(1);
+    const targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      e.preventDefault();
+      targetEl.scrollIntoView({ behavior: 'smooth' });
+
+      const menu = document.getElementById('menu');
+      if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        menu.classList.remove('transition-all');
+        menu.classList.remove('duration-300');
+      }
+    }
+  });
+});
+
+document.addEventListener('click', function (event) {
+  const menu = document.getElementById('menu');
+  const menuBtn = document.getElementById('menu-btn');
+  if (
+    menu.classList.contains('active') &&
+    !menu.contains(event.target) &&
+    !menuBtn.contains(event.target)
+  ) {
+    menu.classList.remove('active');
+    menu.classList.remove('transition-all');
+    menu.classList.remove('duration-300');
+  }
+});
+
+function onSubmit(token) {
+  document.getElementById('contact-form').submit();
+}
