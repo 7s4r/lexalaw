@@ -49,7 +49,8 @@ window.locales = {
     'service11-title': 'Law in Monaco',
     'service11-text':
       'Litigation and advisory in Monaco’s courts: criminal, civil, commercial and family matters. Support for non-residents.',
-    'about-title': 'About us',
+    'about-title':
+      'An international law firm committed to defending your rights',
     'about-text1':
       'Lexalaw is dedicated to providing high-quality legal services. Our team of experts consists of lawyers specializing in various areas of law. We are committed to defending your rights with integrity and professionalism.',
     'about-text2':
@@ -137,7 +138,8 @@ window.locales = {
     'service11-title': 'Droit à Monaco',
     'service11-text':
       'Conseil et contentieux devant les juridictions monégasques : affaires pénales, civiles, commerciales et familiales. Accompagnement des non-résidents.',
-    'about-title': 'À propos',
+    'about-title':
+      'Un cabinet d’avocats international engagé pour la défense de vos droits',
     'about-text1':
       'Lexalaw est un cabinet d’avocats engagé à fournir des services juridiques de haute qualité. Notre équipe est composée d’avocats spécialisés dans divers domaines du droit. Nous défendons vos droits avec intégrité et professionnalisme.',
     'about-text2':
@@ -225,7 +227,8 @@ window.locales = {
     'service11-title': 'Право Монако',
     'service11-text':
       'Судебная защита и консультации в Монако: уголовные, гражданские, коммерческие и семейные дела. Помощь нерезидентам.',
-    'about-title': 'О нас',
+    'about-title':
+      'Международная юридическая фирма, стоящая на защите ваших прав',
     'about-text1':
       'Lexalaw — юридическая фирма, предоставляющая качественные юридические услуги. Наша команда состоит из опытных специалистов в различных областях права. Мы защищаем ваши интересы с честностью и профессионализмом.',
     'about-text2':
@@ -312,7 +315,7 @@ window.locales = {
     'service11-title': 'Право Монако',
     'service11-text':
       'Юридичне консультування та представництво у судах Монако: кримінальні, цивільні, комерційні та сімейні справи. Супровід нерезидентів.',
-    'about-title': 'Про нас',
+    'about-title': 'Міжнародна юридична фірма, що захищає ваші права',
     'about-text1':
       'Lexalaw — юридична фірма, яка надає високоякісні правові послуги. Наша команда складається з досвідчених юристів у різних галузях права. Ми захищаємо ваші права з доброчесністю та професіоналізмом.',
     'about-text2':
