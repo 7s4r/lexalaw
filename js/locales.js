@@ -6,6 +6,8 @@ window.locales = {
       'Multilingual law firm specialized in international, criminal, family and immigration law.',
     'meta-keywords':
       'international lawyer, criminal lawyer, immigration law, divorce attorney, EU sanctions lawyer, Monaco lawyer, crypto lawyer, blockchain legal advice, multilingual law firm, Lexalaw, cross-border litigation, family law attorney, immigration attorney, public international law, private international law',
+    'og-title': 'Lexalaw | Multilingual International Law Firm',
+    'og-description': 'International, criminal, family and immigration law.',
     'nav-services': 'Services',
     'nav-about': 'About',
     'nav-contact': 'Contact',
@@ -95,6 +97,9 @@ window.locales = {
       'Cabinet d’avocats multilingue spécialisé en droit international, pénal, de la famille, et immigration.',
     'meta-keywords':
       'avocat international, avocat pénaliste, droit des étrangers, avocat divorce, avocat sanctions européennes, avocat Monaco, avocat crypto, avocat blockchain, cabinet multilingue, Lexalaw, contentieux transfrontalier, avocat droit de la famille, avocat immigration, droit international public, droit international privé',
+    'og-title': 'Lexalaw | Cabinet d’avocats multilingue',
+    'og-description':
+      'Droit international, pénal, de la famille et des étrangers.',
     'nav-services': 'Services',
     'nav-about': 'À propos',
     'nav-contact': 'Contact',
@@ -184,6 +189,9 @@ window.locales = {
       'Многоязычная юридическая фирма, специализирующаяся на международном, уголовном, семейном праве и миграционных вопросах.',
     'meta-keywords':
       'международный юрист, уголовный адвокат, иммиграционное право, развод, санкции ЕС, адвокат в Монако, адвокат по криптовалюте, блокчейн юрист, многоязычная юридическая фирма, Lexalaw, трансграничные споры, семейное право, иммиграционный адвокат, международное публичное право, международное частное право',
+    'og-title': 'Lexalaw | Многоязычная международная юридическая фирма',
+    'og-description':
+      'Международное, уголовное, семейное и иммиграционное право.',
     'nav-services': 'Услуги',
     'nav-about': 'О нас',
     'nav-contact': 'Контакты',
@@ -272,6 +280,8 @@ window.locales = {
       'Багатомовна юридична фірма, що спеціалізується на міжнародному, кримінальному, сімейному праві та імміграційних справах.',
     'meta-keywords':
       'міжнародний адвокат, кримінальний адвокат, імміграційне право, адвокат з розлучень, адвокат із санкцій ЄС, адвокат у Монако, крипто-юрист, блокчейн адвокат, багатомовна юридична фірма, Lexalaw, транскордонні спори, адвокат з сімейного права, адвокат з імміграції, міжнародне публічне право, міжнародне приватне право',
+    'og-title': 'Lexalaw | Багатомовна міжнародна юридична фірма',
+    'og-description': 'Міжнародне, кримінальне, сімейне та міграційне право.',
     'nav-services': 'Послуги',
     'nav-about': 'Про нас',
     'nav-contact': 'Контакти',

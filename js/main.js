@@ -170,4 +170,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.head.appendChild(canonical);
+
+  // Gestion dynamique des balises Open Graph
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector(
+    'meta[property="og:description"]'
+  );
+
+  if (ogTitle && ogDescription) {
+    const currentOgTitle = translations[lang || 'fr']['og-title'];
+    const currentOgDesc = translations[lang || 'fr']['og-description'];
+    ogTitle.setAttribute('content', currentOgTitle);
+    ogDescription.setAttribute('content', currentOgDesc);
+  }
 });
