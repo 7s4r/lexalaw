@@ -160,16 +160,6 @@ function onSubmit(token) {
 document.addEventListener('DOMContentLoaded', () => {
   const url = new URL(window.location.href);
   const lang = url.searchParams.get('lang');
-  const canonical = document.createElement('link');
-  canonical.setAttribute('rel', 'canonical');
-
-  if (lang) {
-    canonical.setAttribute('href', `https://lexalaw.eu?lang=${lang}`);
-  } else {
-    canonical.setAttribute('href', 'https://lexalaw.eu');
-  }
-
-  document.head.appendChild(canonical);
 
   // Gestion dynamique des balises Open Graph
   const ogTitle = document.querySelector('meta[property="og:title"]');
