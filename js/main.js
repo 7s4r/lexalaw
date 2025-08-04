@@ -40,7 +40,7 @@ function applyTranslations(lang) {
   document.querySelectorAll('[id]').forEach((element) => {
     const translationKey = element.id;
     if (translations[lang] && translations[lang][translationKey]) {
-      element.textContent = translations[lang][translationKey];
+      element.innerHTML = translations[lang][translationKey];
     }
   });
 
@@ -70,6 +70,14 @@ function applyTranslations(lang) {
       }
     }
   );
+
+  const email = 'info' + '@' + 'lexalaw.eu';
+  const emailLinkHTML = `<a href="mailto:${email}" class="text-blue-600 hover:underline">${email}</a>`;
+  const contactEmailEl = document.getElementById('email-link-contact');
+  const footerEmailEl = document.getElementById('email-link-footer');
+
+  if (contactEmailEl) contactEmailEl.innerHTML = emailLinkHTML;
+  if (footerEmailEl) footerEmailEl.innerHTML = emailLinkHTML;
 }
 
 const contactForm = document.getElementById('contact-form');

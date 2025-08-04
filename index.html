@@ -14,12 +14,26 @@
     />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      />
+    </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://lexalaw.eu" />
+    <link rel="alternate" hreflang="fr" href="https://lexalaw.eu?lang=fr" />
+    <link rel="alternate" hreflang="en" href="https://lexalaw.eu?lang=en" />
+    <link rel="alternate" hreflang="ru" href="https://lexalaw.eu?lang=ru" />
+    <link rel="alternate" hreflang="uk" href="https://lexalaw.eu?lang=uk" />
+    <link rel="alternate" hreflang="x-default" href="https://lexalaw.eu" />
     <style>
       @media (max-width: 768px) {
         .mobile-menu {
@@ -30,12 +44,6 @@
         display: block;
       }
     </style>
-    <link rel="canonical" href="https://lexalaw.eu" />
-    <link rel="alternate" hreflang="fr" href="https://lexalaw.eu?lang=fr" />
-    <link rel="alternate" hreflang="en" href="https://lexalaw.eu?lang=en" />
-    <link rel="alternate" hreflang="ru" href="https://lexalaw.eu?lang=ru" />
-    <link rel="alternate" hreflang="uk" href="https://lexalaw.eu?lang=uk" />
-    <link rel="alternate" hreflang="x-default" href="https://lexalaw.eu" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -46,7 +54,9 @@
         "description": "Cabinet d’avocats multilingue spécialisé en droit international, pénal, de la famille, et immigration.",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Europe",
+          "streetAddress": "12 Rue de la Justice",
+          "addressLocality": "Paris",
+          "postalCode": "75001",
           "addressCountry": "FR"
         },
         "areaServed": "International",
@@ -68,6 +78,12 @@
 
       gtag('config', 'G-90BNN49EWZ');
     </script>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="uk_UA" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="" id="og-title" />
     <meta property="og:description" content="" id="og-description" />
     <meta property="og:url" content="https://lexalaw.eu" />
@@ -75,7 +91,6 @@
       property="og:image"
       content="https://lexalaw.eu/images/lexalaw-logo.png"
     />
-    <meta property="og:type" content="website" />
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!-- Navbar -->
@@ -158,9 +173,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-96 mt-16">
+    <div class="relative h-96 mt-16">
       <picture>
-        <source srcset="images/law-firm-lexalaw-hero.webp" type="image/webp" />
+        <source
+          srcset="images/law-firm-lexalaw-hero-mobile.webp"
+          media="(max-width: 768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="images/law-firm-lexalaw-hero.webp"
+          media="(min-width: 769px)"
+          type="image/webp"
+        />
         <img
           src="images/law-firm-lexalaw-hero.jpg"
           alt="Cabinet Lexalaw"
@@ -185,7 +209,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Services Section -->
     <section id="services" class="py-16">
@@ -556,6 +580,9 @@
           📞 Une question ? Besoin d'un rendez-vous ? <br />Contactez-nous
         </h2>
         <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
+          <p class="mb-4 text-gray-700" id="contact-form-text">
+            Remplissez le formulaire ci-dessous pour nous envoyer un message.
+          </p>
           <form method="POST" id="contact-form">
             <input
               type="hidden"
@@ -722,6 +749,20 @@
             </button>
             <div class="mb-4" id="form-result" class="font-semibold"></div>
           </form>
+        </div>
+        <div
+          class="mt-6 mb-4 text-center text-gray-900 text-md"
+          id="contact-address"
+        >
+          📍 Vous pouvez aussi nous écrire ou nous rendre visite au cabinet :<br />110
+          Boulevard Malesherbes, 75008 Paris, France
+        </div>
+        <div class="text-center text-gray-900 text-md" id="contact-email">
+          📧 Ou nous contacter directement par e-mail à :
+          <span
+            id="email-link-contact"
+            class="text-blue-900 hover:underline cursor-pointer"
+          ></span>
         </div>
       </div>
     </section>

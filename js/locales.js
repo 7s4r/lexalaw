@@ -58,6 +58,7 @@ window.locales = {
     'about-text2':
       'Whether you need legal advice, court representation, or support for your projects, we are here to help you every step of the way.',
     'contact-title': 'A question? Need appointment? \n Contact us',
+    'contact-form-text': 'Fill out the form below to send us a message.',
     'contact-name-label': 'Name',
     'contact-email-label': 'Email',
     'contact-phone-label': 'Phone',
@@ -69,6 +70,13 @@ window.locales = {
     'contact-success': 'Your message has been sent successfully.',
     'contact-error':
       'There was an error sending your message. Please try again.',
+    'contact-address':
+      '📍 You can also write to us or visit our office at:<br />110 Boulevard Malesherbes, 75008 Paris, France',
+    'contact-email':
+      '📧 Or contact us directly by email at: <span id="email-link-contact" class="text-blue-600 hover:underline cursor-pointer"></span>',
+    'footer-address': '📍 110 Boulevard Malesherbes, 75008 Paris, France',
+    'footer-email':
+      '📧 <span id="email-link-footer" class="text-blue-600 hover:underline cursor-pointer"></span>',
     'footer-text': '© 2023 - 2025 Lexalaw. All rights reserved',
     'form-service1-option': 'International commercial litigation',
     'form-service2-option': 'Sports law',
@@ -151,6 +159,8 @@ window.locales = {
       'Qu’il s’agisse de conseils, de représentation en justice ou de soutien à vos projets, nous vous accompagnons à chaque étape.',
     'contact-title':
       'Une question ? Besoin d’un rendez-vous ? \n Contactez-nous',
+    'contact-form-text':
+      'Remplissez le formulaire ci-dessous pour nous envoyer un message.',
     'contact-name-label': 'Nom',
     'contact-email-label': 'Email',
     'contact-phone-label': 'Téléphone',
@@ -162,6 +172,13 @@ window.locales = {
     'contact-success': 'Votre message a été envoyé avec succès.',
     'contact-error':
       'Une erreur est survenue lors de l’envoi de votre message. Veuillez réessayer.',
+    'contact-address':
+      '📍 Vous pouvez aussi nous écrire ou nous rendre visite au cabinet :<br />110 Boulevard Malesherbes, 75008 Paris, France',
+    'contact-email':
+      '📧 Ou nous contacter directement par e-mail à : <span id="email-link-contact" class="text-blue-600 hover:underline cursor-pointer"></span>',
+    'footer-address': '📍 110 Boulevard Malesherbes, 75008 Paris, France',
+    'footer-email':
+      '📧 <span id="email-link-footer" class="text-blue-600 hover:underline cursor-pointer"></span>',
     'footer-text': '© 2023 - 2025 Lexalaw. Tous droits réservés',
     'form-service1-option': 'Contentieux commercial international',
     'form-service2-option': 'Droit du sport',
@@ -242,6 +259,7 @@ window.locales = {
     'about-text2':
       'Нужна консультация, защита в суде или поддержка проекта? Мы рядом на каждом этапе.',
     'contact-title': 'Вопрос? Хотите записаться? \n Свяжитесь с нами',
+    'contact-form-text': 'Заполните форму ниже, чтобы отправить нам сообщение.',
     'contact-name-label': 'Имя',
     'contact-email-label': 'Эл. почта',
     'contact-phone-label': 'Телефон',
@@ -253,6 +271,13 @@ window.locales = {
     'contact-success': 'Ваше сообщение успешно отправлено.',
     'contact-error':
       'Произошла ошибка при отправке вашего сообщения. Пожалуйста, попробуйте еще раз.',
+    'contact-address':
+      '📍 Вы также можете написать нам или посетить наш офис по адресу:<br />110 Boulevard Malesherbes, 75008 Париж, Франция',
+    'contact-email':
+      '📧 Или свяжитесь с нами напрямую по электронной почте: <span id="email-link-contact" class="text-blue-600 hover:underline cursor-pointer"></span>',
+    'footer-address': '📍 110 Boulevard Malesherbes, 75008 Париж, Франция',
+    'footer-email':
+      '📧 <span id="email-link-footer" class="text-blue-600 hover:underline cursor-pointer"></span>',
     'footer-text': '© 2023 - 2025 Lexalaw. Все права защищены',
     'form-service1-option': 'Международные коммерческие споры',
     'form-service2-option': 'Спортивное право',
@@ -331,6 +356,8 @@ window.locales = {
     'about-text2':
       'Потрібна консультація, представництво в суді чи підтримка проєкту? Ми поруч на кожному етапі.',
     'contact-title': 'Питання? Потрібна консультація? \n Звʼяжіться з нами',
+    'contact-form-text':
+      'Заповніть форму нижче, щоб надіслати нам повідомлення.',
     'contact-name-label': "Ім'я",
     'contact-email-label': 'Email',
     'contact-phone-label': 'Телефон',
@@ -342,6 +369,13 @@ window.locales = {
     'contact-success': 'Ваше повідомлення успішно надіслано.',
     'contact-error':
       'Сталася помилка під час надсилання вашого повідомлення. Будь ласка, спробуйте ще раз.',
+    'contact-address':
+      '📍 Ви також можете написати нам або відвідати наш офіс за адресою:<br />110 Boulevard Malesherbes, 75008 Париж, Франція',
+    'contact-email':
+      '📧 Або звʼяжіться з нами безпосередньо електронною поштою: <span id="email-link-contact" class="text-blue-600 hover:underline cursor-pointer"></span>',
+    'footer-address': '📍 110 Boulevard Malesherbes, 75008 Париж, Франція',
+    'footer-email':
+      '📧 <span id="email-link-footer" class="text-blue-600 hover:underline cursor-pointer"></span>',
     'footer-text': '© 2023 - 2025 Lexalaw. Всі права захищено',
     'form-service1-option': 'Міжнародні комерційні спори',
     'form-service2-option': 'Спортивне право',
