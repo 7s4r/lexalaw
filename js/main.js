@@ -1,20 +1,47 @@
 // js/main.js
 const translations = window.locales;
 
-// Détection automatique de la langue du navigateur
-document.addEventListener('DOMContentLoaded', () => {
+function getCurrentLanguage() {
   const supportedLangs = ['fr', 'en', 'ru', 'uk'];
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get('lang');
   const storedLang = localStorage.getItem('language');
   const browserLang = navigator.language.slice(0, 2);
-  const defaultLang = supportedLangs.includes(urlLang)
-    ? urlLang
-    : storedLang || (supportedLangs.includes(browserLang) ? browserLang : 'en');
 
+  return supportedLangs.includes(urlLang)
+    ? urlLang
+    : storedLang || (supportedLangs.includes(browserLang) ? browserLang : 'fr');
+}
+
+function updateEmailLinks() {
+  const email = 'info' + '@' + 'lexalaw.eu';
+  const emailLinkHTML = `<a href="mailto:${email}" class="text-blue-600 hover:underline">${email}</a>`;
+  const contactEmailEl = document.getElementById('email-link-contact');
+  const footerEmailEl = document.getElementById('email-link-footer');
+
+  if (contactEmailEl) contactEmailEl.innerHTML = emailLinkHTML;
+  if (footerEmailEl) footerEmailEl.innerHTML = emailLinkHTML;
+}
+
+function updateOpenGraphTags(lang) {
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector(
+    'meta[property="og:description"]'
+  );
+
+  if (ogTitle && ogDescription && translations[lang]) {
+    ogTitle.setAttribute('content', translations[lang]['og-title']);
+    ogDescription.setAttribute('content', translations[lang]['og-description']);
+  }
+}
+
+// Détection automatique de la langue du navigateur
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultLang = getCurrentLanguage();
   localStorage.setItem('language', defaultLang);
   languageSelect.value = defaultLang;
   applyTranslations(defaultLang);
+  updateOpenGraphTags(defaultLang);
 });
 
 const languageSelect = document.getElementById('language-select');
@@ -23,6 +50,7 @@ languageSelect.addEventListener('change', function () {
   const selectedLanguage = this.value;
   localStorage.setItem('language', selectedLanguage);
   applyTranslations(selectedLanguage);
+  updateOpenGraphTags(selectedLanguage);
 
   const url = new URL(window.location);
   url.searchParams.set('lang', selectedLanguage);
@@ -71,17 +99,28 @@ function applyTranslations(lang) {
     }
   );
 
-  const email = 'info' + '@' + 'lexalaw.eu';
-  const emailLinkHTML = `<a href="mailto:${email}" class="text-blue-600 hover:underline">${email}</a>`;
-  const contactEmailEl = document.getElementById('email-link-contact');
-  const footerEmailEl = document.getElementById('email-link-footer');
-
-  if (contactEmailEl) contactEmailEl.innerHTML = emailLinkHTML;
-  if (footerEmailEl) footerEmailEl.innerHTML = emailLinkHTML;
+  updateEmailLinks();
 }
 
 const contactForm = document.getElementById('contact-form');
 const formResult = document.getElementById('form-result');
+
+/**
+ * Utility to display the result of the contact form.
+ * @param {'success'|'error'|'info'} type
+ * @param {string} message
+ */
+function displayFormResult(type, message) {
+  formResult.className = `font-semibold ${
+    type === 'success'
+      ? 'text-green-600'
+      : type === 'error'
+      ? 'text-red-600'
+      : 'text-blue-600'
+  }`;
+  formResult.innerHTML = message;
+  formResult.style.display = '';
+}
 
 contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -89,9 +128,10 @@ contactForm.addEventListener('submit', function (e) {
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   const currentLang = localStorage.getItem('language') || 'en';
-  formResult.className = 'text-blue-600 font-semibold';
-  formResult.innerHTML =
-    translations[currentLang]['contact-wait'] || 'Please wait...';
+  displayFormResult(
+    'info',
+    translations[currentLang]['contact-wait'] || 'Please wait...'
+  );
 
   fetch('https://api.web3forms.com/submit', {
     method: 'POST',
@@ -104,22 +144,25 @@ contactForm.addEventListener('submit', function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        formResult.innerHTML =
+        displayFormResult(
+          'success',
           translations[currentLang]['contact-success'] ||
-          'Your message has been sent successfully.';
-        formResult.className = 'text-green-600 font-semibold';
+            'Your message has been sent successfully.'
+        );
       } else {
-        formResult.className = 'text-red-600 font-semibold';
-        formResult.innerHTML =
+        displayFormResult(
+          'error',
           translations[currentLang]['contact-error'] ||
-          'There was an error sending your message. Please try again.';
+            'There was an error sending your message. Please try again.'
+        );
       }
     })
     .catch((error) => {
       console.log(error);
-      formResult.className = 'text-red-600 font-semibold';
-      formResult.innerHTML =
-        translations[currentLang]['contact-error'] || 'Something went wrong!';
+      displayFormResult(
+        'error',
+        translations[currentLang]['contact-error'] || 'Something went wrong!'
+      );
     })
     .then(function () {
       contactForm.reset();
@@ -164,21 +207,3 @@ document.addEventListener('click', function (event) {
 function onSubmit(token) {
   document.getElementById('contact-form').submit();
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const url = new URL(window.location.href);
-  const lang = url.searchParams.get('lang');
-
-  // Gestion dynamique des balises Open Graph
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  const ogDescription = document.querySelector(
-    'meta[property="og:description"]'
-  );
-
-  if (ogTitle && ogDescription) {
-    const currentOgTitle = translations[lang || 'fr']['og-title'];
-    const currentOgDesc = translations[lang || 'fr']['og-description'];
-    ogTitle.setAttribute('content', currentOgTitle);
-    ogDescription.setAttribute('content', currentOgDesc);
-  }
-});

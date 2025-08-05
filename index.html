@@ -13,16 +13,13 @@
       content="avocat international, avocat pénaliste, droit des étrangers, avocat divorce, avocat sanctions européennes, avocat Monaco, avocat crypto, avocat blockchain, cabinet multilingue, Lexalaw, contentieux transfrontalier, avocat droit de la famille, avocat immigration, droit international public, droit international privé"
     />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      href="./dist/main.min.css"
       rel="preload"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-      />
+      <link href="./dist/main.min.css" rel="stylesheet" />
     </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -92,7 +89,7 @@
       content="https://lexalaw.eu/images/lexalaw-logo.png"
     />
   </head>
-  <body class="bg-gray-100 text-gray-900">
+  <body class="bg-gray-100 text-gray-900 min-h-screen overflow-x-hidden">
     <!-- Navbar -->
     <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <div
@@ -194,18 +191,20 @@
           loading="eager"
           decoding="async"
           fetchpriority="high"
+          style="aspect-ratio: 16 / 9"
         />
       </picture>
       <div
         class="absolute inset-0 bg-white bg-opacity-70 flex items-center justify-center"
       >
-        <div class="p-8 text-center">
+        <div class="p-8 text-center min-h-[160px]">
           <h1 class="text-4xl font-bold mb-4" id="hero-title">
-            Bienvenue chez Lexalaw
+            Votre défense, notre mission. Partout. À tout moment.
           </h1>
           <p class="text-xl" id="hero-text">
-            Nous offrons une large gamme de services juridiques pour répondre à
-            vos besoins.
+            Avocats multilingues en droit international, pénal, de la famille et
+            de l’immigration. Nous protégeons vos droits en France, à Monaco et
+            à l’étranger.
           </p>
         </div>
       </div>
@@ -611,6 +610,7 @@
                 name="name"
                 class="w-full mt-2 p-2 border border-gray-300 rounded-lg"
                 required
+                autocomplete="name"
               />
             </div>
             <div class="mb-4">
@@ -629,6 +629,7 @@
                 name="email"
                 class="w-full mt-2 p-2 border border-gray-300 rounded-lg"
                 required
+                autocomplete="email"
               />
             </div>
             <div class="mb-4">
@@ -647,6 +648,7 @@
                 name="phone"
                 class="w-full mt-2 p-2 border border-gray-300 rounded-lg"
                 required
+                autocomplete="tel"
               />
             </div>
             <div class="mb-4">
@@ -788,8 +790,8 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="js/locales.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript" src="dist/locales.min.js"></script>
+    <script type="text/javascript" src="dist/main.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" defer></script>
   </body>
 </html>
